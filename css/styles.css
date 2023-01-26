@@ -546,6 +546,77 @@ video {
   height: auto;
 }
 
+@font-face {
+  font-family:"TrebuchetMS";
+
+  src: url('fonts/TrebuchetMS.ttf');
+}
+
+@font-face{
+  font-family: "BebasNeue";
+
+  src: url('fonts/BebasNeue.otf');
+}
+
+@font-face{
+  font-family: "WebSymbolsRegular";
+
+  src: url('fonts/websymbols-regular-webfont.eot');
+
+  src: url('fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+             url('fonts/websymbols-regular-webfont.woff') format('woff'),
+             url('fonts/websymbols-regular-webfont.ttf') format('truetype'),
+             url('fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+}
+
+.simbol{
+  font-family: "WebSymbolsRegular";
+}
+
+.menu{
+  font-family: "TrebuchetMS";
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.boton {
+  color: #fff !important;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  background: #318aac;
+  border: 2px solid;
+  border-color: #318aac;
+  position: relative;
+}
+
+.boton:before {
+  content:"";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 1s ease;
+}
+
+.boton:hover:before {
+  width: 100%;
+}
+
+.acer{
+  transition-delay: 100ms;
+}
+
 .container {
   width: 100%;
 }
@@ -178079,3 +178150,4 @@ video {
     animation: bounce 1s infinite;
   }
 }
+
