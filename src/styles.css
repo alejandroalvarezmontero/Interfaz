@@ -61,6 +61,60 @@
       .acer{
         transition-delay: 100ms;
       }
+      #header{
+        font-family: "BebasNeue";
+        letter-spacing: 0.2em;
+      }
+      .letrero{
+        border-left-width: 8px;
+        border-right-width: 8px;
+        background-image: url("../img/bakbaner.png");
+        padding-bottom: 50px;
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+      .uno {
+ 
+        background:url("../img/bakbaner.png");
+        position: relative;
+        animation-name: joder;
+        animation-duration: 3s;  
+        animation-fill-mode: forwards;
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+      
+      
+      
+      @keyframes joder {
+      
+      from {
+      
+      width: 1200;
+      
+      height: 180;
+      
+      top: 45px;
+      
+      left:45px;
+      
+      }
+      
+      to {
+      
+      width: 1200px;
+      
+      height: 180px;
+      
+      top: 120;
+      
+      left: 120;
+      
+      }
+      }
+      body{
+        background-image: url("../img/pattern.png");
+      }
       
 }
 
