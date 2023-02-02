@@ -577,6 +577,10 @@ video {
   font-family: "TrebuchetMS";
 }
 
+.letras{
+  font-family: "BebasNeue";
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -596,6 +600,109 @@ video {
   border: 2px solid;
   border-color: #318aac;
   position: relative;
+}
+
+.card{
+  float:left;
+  width: 205px;
+  height: 305px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 2px #ddd;
+  background: white;
+  overflow: hidden;
+  margin: 22px;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.card:hover{
+  background: black;
+}
+
+.card:last-child{
+  margin-right: 0px;
+}
+
+.card .icon{
+  display: block;
+  width: 100%;
+  height: 130px;
+  font-size: 50px;
+  line-height: 110px;
+  text-align: center;
+  margin: 0px auto;
+  transition: all 300ms;
+  font-family: "WebSymbolsRegular";
+}
+
+.card:hover .icon{
+  font-size: 70px;
+  color: #37bcf9;
+  animation: showIcon 300ms linear;
+  font-family: "WebSymbolsRegular";
+}
+
+@keyframes showIcon{
+  from{
+    transform: translateY(-200%);
+  }
+
+  to{
+    transform: translateY(0%);
+  }
+}
+
+.card .category{
+  width: 100%;
+  height: 50px;
+  font-family: "TrebuchetMS";
+  font-size: 21px;
+  font-weight: bold;
+  text-align: center;
+  color: #00538c;
+  transition: all 300ms;
+}
+
+.card:hover .category{
+  color: white;
+  animation: showCategory 400ms linear;
+}
+
+@keyframes showCategory{
+  from{
+    transform: translateY(-300%);
+    color:black;
+  }
+
+  to{
+    transfrom: translateY(0%);
+    color: white;
+  }
+}
+
+.card .description{
+  font-family: "TrebuchetMS";
+  text-align: center;
+  color: #0370b9;
+  font-size: 15px;
+  transition: all 300ms;
+}
+
+.card:hover .description{
+  color: white;
+  animation: showDescription 400ms linear;
+}
+
+@keyframes showDescription{
+  from{
+    transform: translateX(-300%);
+    color: black;
+  }
+
+  to{
+    transform: translateX(0%);
+  }
 }
 
 .boton:before {
@@ -622,12 +729,16 @@ video {
   letter-spacing: 0.2em;
 }
 
-.letrero{
-  border-left-width: 8px;
-  border-right-width: 8px;
-  padding-bottom: 50px;
-  margin-left: 40px;
-  margin-right: 40px;
+.banner{
+  width: 95.5%;
+  height: 100px;
+  border: 10px solid white;
+  box-shadow: 0px 0px 2px gray;
+  background: url("../img/bakbaner.png");
+  background-position: -200px -200px;
+  margin: 20px auto;
+  overflow: hidden;
+  animation: backBanner 10s linear;
 }
 
 .uno {
@@ -4351,6 +4462,7 @@ body{
 
 .bg-animation background-image {
   spin-slow: spin 3s linear infinite;
+  wiggle: wiggle 1s ease-in-out infinite;
 }
 
 .from-transparent {
@@ -33976,6 +34088,7 @@ body{
 
   .sm\:bg-animation background-image {
     spin-slow: spin 3s linear infinite;
+    wiggle: wiggle 1s ease-in-out infinite;
   }
 
   .sm\:from-transparent {
@@ -63558,6 +63671,7 @@ body{
 
   .md\:bg-animation background-image {
     spin-slow: spin 3s linear infinite;
+    wiggle: wiggle 1s ease-in-out infinite;
   }
 
   .md\:from-transparent {
@@ -93140,6 +93254,7 @@ body{
 
   .lg\:bg-animation background-image {
     spin-slow: spin 3s linear infinite;
+    wiggle: wiggle 1s ease-in-out infinite;
   }
 
   .lg\:from-transparent {
@@ -122722,6 +122837,7 @@ body{
 
   .xl\:bg-animation background-image {
     spin-slow: spin 3s linear infinite;
+    wiggle: wiggle 1s ease-in-out infinite;
   }
 
   .xl\:from-transparent {
@@ -152304,6 +152420,7 @@ body{
 
   .\32xl\:bg-animation background-image {
     spin-slow: spin 3s linear infinite;
+    wiggle: wiggle 1s ease-in-out infinite;
   }
 
   .\32xl\:from-transparent {

@@ -6,6 +6,7 @@ module.exports= {
                 'footer-texture': "url('/img/footer-texture.png')",
                 animation: {
                     'spin-slow': 'spin 3s linear infinite',
+                    wiggle: 'wiggle 1s ease-in-out infinite',
                   }
               
             }
