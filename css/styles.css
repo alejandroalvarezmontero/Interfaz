@@ -569,6 +569,11 @@ video {
              url('fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
 }
 
+.fot{
+  width: 20%;
+  height: 20%;
+}
+
 .simbol{
   font-family: "WebSymbolsRegular";
 }
