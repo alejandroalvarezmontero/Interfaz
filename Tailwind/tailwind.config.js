@@ -12,6 +12,7 @@ module.exports= {
             backgroundImage:{
                 'hero-pattern': "url('/img/hero-pattern.svg')",
                 'footer-texture': "url('/img/footer-texture.png')",
+                'fondo': "url ('/img/to/peso.webp')",
                 animation: {
                     'spin-slow': 'spin 3s linear infinite',
                     wiggle: 'wiggle 1s ease-in-out infinite',

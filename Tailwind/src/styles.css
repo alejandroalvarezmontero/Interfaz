@@ -135,7 +135,16 @@
         color: white;
     }
 }
+.body{
+  background: url("https://imgs.search.brave.com/9YR9MTmSl-lafc8Pgdy8zv1xqFykurNA8y8GG1WrKZE/rs:fit:1200:1152:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvODM0/Mjc5LmpwZw");
+  background-repeat: no-repeat;
+  background-size: 100%;
 
+}
+.imagen{
+  width: 100px;
+  height: 1800px;
+}
 
 .card .description{
     font-family: "TrebuchetMS";
