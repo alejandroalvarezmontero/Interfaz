@@ -138,8 +138,20 @@
 .body{
   background: url("https://imgs.search.brave.com/9YR9MTmSl-lafc8Pgdy8zv1xqFykurNA8y8GG1WrKZE/rs:fit:1200:1152:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvODM0/Mjc5LmpwZw");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 115%;
+  background-attachment: fixed;
 
+}
+.sim{
+  background: url("https://imgs.search.brave.com/m37Dp98A708-9sV9jQrlIzWs8zABQ2fkzn-W1ryit8I/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXItaG91c2Uu/Y29tL2RhdGEvb3V0/Lzkvd2FsbHBhcGVy/MnlvdV8zMjM4MzAu/anBn");
+  background-repeat: no-repeat;
+  background-size: 105%;
+  background-attachment: fixed;
+}
+
+
+.let{
+  margin-left: 100px;
 }
 .imagen{
   width: 100px;

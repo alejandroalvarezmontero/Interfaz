@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="body">
+<body>
     <header class="bg-gray-700 py-4">
         <nav class="bg-orange-700 shadow-lg">
           <div class="container mx-auto">
@@ -35,8 +35,64 @@
           </div>
         </nav>
       </header> 
-      <div class="flex flex-row mx-auto">
-        <div class="max-w-xs bg-gray-100 p-4 m-2 mx-auto">
+      <div class="bg-gradient-to-r from-red-900 to-black p-4">
+        <div class="container mx-auto flex justify-between items-center">
+          <div>
+            <h2 class="text-white text-2xl font-bold mx-auto let">¡Aprovéchate!</h2>
+            <p class="text-white mx-auto">Tienes el 30% de descuento los primeros meses desde nuestra apertura.</p>
+          </div>
+          
+        </div>
+      </div>
+      <div class="bg-gray-100 my-2">
+      <table class="table table-auto border divide-y text-center mx-auto ">
+        <thead>
+          <tr>
+            <th class="bg-gray-100"></th>
+            <th class="bg-gray-100">Lunes</th>
+            <th class="bg-gray-100">Martes</th>
+            <th class="bg-gray-100">Miércoles</th>
+            <th class="bg-gray-100">Jueves</th>
+            <th class="bg-gray-100">Viernes</th>
+            <th class="bg-gray-100">Sábado</th>
+          </tr>
+        </thead>
+        <tbody class="p-5">
+          <tr class="bg-gray-100 hover:bg-gray-200">
+            <td class="bg-gray-100">6:00 - 7:00</td>
+            <td class="hover:bg-gray-200">Crossfit</td>
+            <td class="hover:bg-gray-200">Kickboxing</td>
+            <td class="hover:bg-gray-200">Zumba</td>
+            <td class="hover:bg-gray-200">Yoga</td>
+            <td class="hover:bg-gray-200">Crossfit</td>
+            <td class="hover:bg-gray-200">Zumba</td>
+          </tr>
+          <tr class="bg-gray-100 hover:bg-gray-200">
+            <td class="bg-gray-100">7:00 - 8:00</td>
+            &nbsp;  &nbsp;  &nbsp;  &nbsp;
+            <td class="hover:bg-gray-200">Kickboxing</td>
+            &nbsp;  &nbsp;  &nbsp;  &nbsp;
+            <td class="hover:bg-gray-200">Crossfit</td>
+            <td class="hover:bg-gray-200">Yoga</td>
+            <td class="hover:bg-gray-200">Zumba</td>
+            <td class="hover:bg-gray-200">Crossfit</td>
+            <td class="hover:bg-gray-200">Zumba</td>
+            
+          </tr>
+          <tr class="bg-gray-100 hover:bg-gray-200">
+            <td class="bg-gray-100">8:00 - 9:00</td>
+            <td class="hover:bg-gray-200">Yoga</td>
+            <td class="hover:bg-gray-200">Kickboxing</td>
+            <td class="hover:bg-gray-200">Zumba</td>
+            <td class="hover:bg-gray-200">Crossfit</td>
+            <td class="hover:bg-gray-200">Kickboxing</td>
+            <td class="hover:bg-gray-200">Crossfit</td>
+            </tr>
+            </tbody>
+            </table>
+      
+      <div class="flex flex-row mx-auto mt-10">
+        <div class="max-w-xs bg-gray-300 p-4 m-2 mx-auto shadow-xl rounded-md">
           <img src="../img/po.webp" alt="Imagen 1" class="w-full mb-2">
           <h2 class="text-lg font-bold mb-2">Plan Básico</h2>
           <p class="text-gray-700">Fitness</p>
@@ -51,7 +107,7 @@
             <br>
             <p><h1 class="mx-auto text-center text-3xl">15,99$</h1></p>
         </div>
-        <div class="max-w-xs bg-gray-100 p-4 m-2 mx-auto">
+        <div class="max-w-xs bg-gray-300 p-4 m-2 mx-auto shadow-xl rounded-md">
           <img src="../img/gafa.webp" alt="Imagen 2" class="w-full mb-2">
           <h2 class="text-lg font-bold mb-2">Plan Amateur</h2>
           <p class="text-gray-700">Fitness</p>
@@ -68,7 +124,7 @@
             <br>
             <p><h1 class="mx-auto text-center text-3xl">49,99$</h1></p>
         </div>
-        <div class="max-w-xs bg-gray-100 p-4 m-2 mx-auto">
+        <div class="max-w-xs bg-gray-300 p-4 m-2 mx-auto shadow-xl rounded-md">
           <img src="../img/ronaldo.webp" alt="Imagen 3" class="w-full mb-2">
           <h2 class="text-lg font-bold mb-2">Plan Histiano</h2>
           <p class="text-gray-700">Fitness</p>
@@ -88,7 +144,7 @@
 
 
 
-      <footer class="text-center lg:text-left bg-gray-100 text-gray-600">
+      <footer class="text-center lg:text-left bg-gray-100 text-gray-600 py-5">
  
   
       </div>
@@ -137,7 +193,7 @@
       
           <div class="">
             <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
-              Contact
+              <a href="contactanos.html" style="text-decoration: none;">Contact</a>
             </h6>
             <p class="flex items-center justify-center md:justify-start mb-4">
               <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home"
