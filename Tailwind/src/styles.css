@@ -148,6 +148,12 @@
   background-size: 105%;
   background-attachment: fixed;
 }
+.na{
+  background: url("https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+}
 
 
 .let{
