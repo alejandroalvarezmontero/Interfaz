@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de inicio de sesión</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="bg-white shadow-lg rounded p-8 max-w-sm">
+      <ul class="flex mb-8">
+        <li class="mr-6">
+          <button id="login-tab" class="font-bold text-blue-500 focus:outline-none">Iniciar sesión</button>
+        </li>
+        <li>
+          <button id="register-tab" class="font-bold text-blue-500 focus:outline-none">Registrarse</button>
+        </li>
+      </ul>
+      <div id="login-form">
+        <h2 class="text-2xl font-bold mb-4">Iniciar sesión</h2>
+        <form>
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Correo electrónico:</label>
+            <input type="email" id="email" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:border-blue-300" placeholder="Ingrese su correo electrónico" required>
+          </div>
+          <div class="mb-6">
+            <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Contraseña:</label>
+            <input type="password" id="password" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:border-blue-300" placeholder="Ingrese su contraseña" required>
+          </div>
+          <button type="submit" class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-blue-600">Iniciar sesión</button>
+        </form>
+      </div>
+      <div id="register-form" class="hidden">
+        <h2 class="text-2xl font-bold mb-4">Registrarse</h2>
+        <form>
+          <div class="mb-4">
+            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nombre completo:</label>
+            <input type="text" id="name" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:border-blue-300" placeholder="Ingrese su nombre completo" required>
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Correo electrónico:</label>
+            <input type="email" id="email" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:border-blue-300" placeholder="Ingrese su correo electrónico" required>
+          </div>
+          <div class="mb-6">
+            <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Contraseña:</label>
+            <input type="password" id="password" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:border-blue-300" placeholder="Ingrese su contraseña" required>
+          </div>
+          <button type="submit" class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-blue-600">Registrarse</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    const loginTab = document.getElementById('login-tab');
+    const registerTab = document.getElementById('register-tab');
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+
+    loginTab.addEventListener('click', () => {
+      loginTab.classList.add('font-bold', 'text-blue-500');
+      registerTab.classList.remove('font-bold', 'text-blue-500');
+      loginForm.classList.remove('hidden');
+      registerForm.classList.add('hidden');
+    });
+
+    registerTab.addEventListener('click', () => {
+      registerTab.classList.add('font-bold', 'text-blue-500');
+      loginTab.classList.remove('font-bold', 'text-blue-500');
+      registerForm.classList.remove('hidden');
+      loginForm.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
