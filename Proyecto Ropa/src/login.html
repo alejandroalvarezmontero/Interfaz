@@ -61,6 +61,67 @@
   </div>
   
   <script>
+    /**
+     * @swagger
+     * tags:
+     *   name: Autenticación
+     *   description: API para inicio de sesión y registro de usuarios
+     */
+
+    /**
+     * @swagger
+     * path:
+     *   /login:
+     *     post:
+     *       summary: Inicio de sesión
+     *       description: Inicia sesión con las credenciales de usuario.
+     *       tags: [Autenticación]
+     *       requestBody:
+     *         required: true
+     *         content:
+     *           application/json:
+     *             schema:
+     *               type: object
+     *               properties:
+     *                 email:
+     *                   type: string
+     *                 password:
+     *                   type: string
+     *       responses:
+     *         '200':
+     *           description: Inicio de sesión exitoso.
+     *         '400':
+     *           description: Error en las credenciales de inicio de sesión.
+     */
+
+    /**
+     * @swagger
+     * path:
+     *   /register:
+     *     post:
+     *       summary: Registro de usuario
+     *       description: Registra un nuevo usuario.
+     *       tags: [Autenticación]
+     *       requestBody:
+     *         required: true
+     *         content:
+     *           application/json:
+     *             schema:
+     *               type: object
+     *               properties:
+     *                 name:
+     *                   type: string
+     *                 email:
+     *                   type: string
+     *                 password:
+     *                   type: string
+     *       responses:
+     *         '200':
+     *           description: Usuario registrado exitosamente.
+     *         '400':
+     *           description: Error en el registro de usuario.
+     */
+
     const loginTab = document.getElementById('login-tab');
     const registerTab = document.getElementById('register-tab');
     const loginForm = document.getElementById('login-form');
