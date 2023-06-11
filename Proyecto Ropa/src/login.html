@@ -61,85 +61,32 @@
   </div>
   
   <script>
-    /**
-     * @swagger
-     * tags:
-     *   name: Autenticación
-     *   description: API para inicio de sesión y registro de usuarios
-     */
+   const express = require('express');
+const app = express();
+const port = 3000;
 
-    /**
-     * @swagger
-     * path:
-     *   /login:
-     *     post:
-     *       summary: Inicio de sesión
-     *       description: Inicia sesión con las credenciales de usuario.
-     *       tags: [Autenticación]
-     *       requestBody:
-     *         required: true
-     *         content:
-     *           application/json:
-     *             schema:
-     *               type: object
-     *               properties:
-     *                 email:
-     *                   type: string
-     *                 password:
-     *                   type: string
-     *       responses:
-     *         '200':
-     *           description: Inicio de sesión exitoso.
-     *         '400':
-     *           description: Error en las credenciales de inicio de sesión.
-     */
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
-    /**
-     * @swagger
-     * path:
-     *   /register:
-     *     post:
-     *       summary: Registro de usuario
-     *       description: Registra un nuevo usuario.
-     *       tags: [Autenticación]
-     *       requestBody:
-     *         required: true
-     *         content:
-     *           application/json:
-     *             schema:
-     *               type: object
-     *               properties:
-     *                 name:
-     *                   type: string
-     *                 email:
-     *                   type: string
-     *                 password:
-     *                   type: string
-     *       responses:
-     *         '200':
-     *           description: Usuario registrado exitosamente.
-     *         '400':
-     *           description: Error en el registro de usuario.
-     */
+// Rutas de inicio de sesión y registro
+app.post('/login', (req, res) => {
+ 
+  const { email, password } = req.body;
 
-    const loginTab = document.getElementById('login-tab');
-    const registerTab = document.getElementById('register-tab');
-    const loginForm = document.getElementById('login-form');
-    const registerForm = document.getElementById('register-form');
+  res.status(200).json({ message: 'Inicio de sesión exitoso' });
+});
 
-    loginTab.addEventListener('click', () => {
-      loginTab.classList.add('font-bold', 'text-blue-500');
-      registerTab.classList.remove('font-bold', 'text-blue-500');
-      loginForm.classList.remove('hidden');
-      registerForm.classList.add('hidden');
-    });
+app.post('/register', (req, res) => {
+  
+  const { name, email, password } = req.body;
 
-    registerTab.addEventListener('click', () => {
-      registerTab.classList.add('font-bold', 'text-blue-500');
-      loginTab.classList.remove('font-bold', 'text-blue-500');
-      registerForm.classList.remove('hidden');
-      loginForm.classList.add('hidden');
-    });
+  res.status(200).json({ message: 'Usuario registrado exitosamente' });
+});
+
+// Iniciar el servidor
+app.listen(port, () => {
+  console.log(`Servidor escuchando en http://localhost:${port}`);
+});
   </script>
 </body>
 </html>

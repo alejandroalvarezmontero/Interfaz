@@ -40,39 +40,126 @@
 
   <main class="container mx-auto py-8">
     <h2 class="text-3xl font-semibold mb-8">Nuevas Prendas</h2>
+    <div class="carrito">
+      <h3>Carrito de Compras</h3>
+      <ul id="listaCarrito"></ul>
+      <button id="comprar-btn">Comprar</button>
+    </div>
+    <div class="blur-background"></div>
+
+  <div class="modal">
+    <h2>Rellena esto para poder realizar su compra</h2>
+    <form id="payment-form">
+      <label for="card-number">Número de Tarjeta:</label>
+      <input type="text" id="card-number" required>
+
+      <label for="card-name">Nombre:</label>
+      <input type="text" id="card-name" required>
+
+      <div>
+        <div style="display: inline-block; width: 60%;">
+          <label for="expiry-date">Fecha de Caducidad:</label>
+          <input type="text" id="expiry-date" required>
+        </div>
+        <div style="display: inline-block; width: 35%;">
+          <label for="cvc">CVC:</label>
+          <input type="text" id="cvc" required>
+        </div>
+      </div>
+
+      <button type="submit">Pagar</button>
+     
+    </form>
+  </div>
+  
+  
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <div class="bg-white rounded shadow-md">
-        <img src="path/to/image1.jpg" alt="Prenda 1" class="w-full h-64 object-cover">
+        <img src="../img/15.webp" alt="Prenda 1" class="w-full h-64 object-cover">
         <div class="p-4">
-          <h3 class="text-xl font-semibold mb-2">Prenda 1</h3>
-          <p class="text-gray-700">Descripción de la prenda 1.</p>
+          <h3 class="text-xl font-semibold mb-2">Conjunto hombre y mujer</h3>
+          <p class="text-gray-700">Conjunto para hombre y conjunto también para mujer.</p>
           <p class="text-gray-600">$29.99</p>
-          <button onclick="agregarAlCarrito({ nombre: 'Conjunto Elástico', precio: 29.99 })">Agregar al carrito</button>
+          <button onclick="agregarAlCarrito({ nombre: 'Conjunto hombre y mujer', precio: 29.99 })">Agregar al carrito</button>
         </div>
       </div>
 
       <div class="bg-white rounded shadow-md">
-        <img src="path/to/image2.jpg" alt="Prenda 2" class="w-full h-64 object-cover">
+        <img src="../img/16.webp" alt="Prenda 2" class="w-full h-64 object-cover">
         <div class="p-4">
-          <h3 class="text-xl font-semibold mb-2">Prenda 2</h3>
-          <p class="text-gray-700">Descripción de la prenda 2.</p>
-          <p class="text-gray-600">$39.99</p>
-          <button onclick="agregarAlCarrito({ nombre: 'Conjunto Elástico', precio: 29.99 })">Agregar al carrito</button>
+          <h3 class="text-xl font-semibold mb-2">Tirantas</h3>
+          <p class="text-gray-700">Camisetas de tirantas tanto para hombre como para mujer.</p>
+          <p class="text-gray-600">$14.99</p>
+          <button onclick="agregarAlCarrito({ nombre: 'Camiseta tirantas', precio: 14.99 })">Agregar al carrito</button>
         </div>
       </div>
 
       <div class="bg-white rounded shadow-md">
-        <img src="path/to/image3.jpg" alt="Prenda 3" class="w-full h-64 object-cover">
+        <img src="../img/21.jpg" alt="Prenda 3" class="w-full h-64 object-cover">
         <div class="p-4">
-          <h3 class="text-xl font-semibold mb-2">Prenda 3</h3>
-          <p class="text-gray-700">Descripción de la prenda 3.</p>
+          <h3 class="text-xl font-semibold mb-2">Ropa para niños</h3>
+          <p class="text-gray-700">También tenemos ropa para niños.</p>
           <p class="text-gray-600">$49.99</p>
-          <button onclick="agregarAlCarrito({ nombre: 'Conjunto Elástico', precio: 29.99 })">Agregar al carrito</button>
+          <button onclick="agregarAlCarrito({ nombre: 'Ropa de fútbol para niños ', precio: 49.99 })">Agregar al carrito</button>
         </div>
       </div>
 
-      <!-- Agrega más prendas aquí -->
+      <div class="bg-white rounded shadow-md">
+        <img src="../img/22.jpg" alt="Prenda 3" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Conjunto para salir a correr</h3>
+          <p class="text-gray-700">Ropa para mujer de running.</p>
+          <p class="text-gray-600">$59.99</p>
+          <button onclick="agregarAlCarrito({ nombre: 'Conjunto Running', precio: 59.99 })">Agregar al carrito</button>
+        </div>
+      </div>
+      <div class="bg-white rounded shadow-md">
+        <img src="../img/23.jpg" alt="Prenda 3" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Ropa para jugar fútbol</h3>
+          <p class="text-gray-700">Conjunto para jugar al fútbol.</p>
+          <p class="text-gray-600">$19.99</p>
+          <button onclick="agregarAlCarrito({ nombre: 'Ropa fútbol adulto', precio: 19.99 })">Agregar al carrito</button>
+        </div>
+      </div>
+      <div class="bg-white rounded shadow-md">
+        <img src="../img/24.jpg" alt="Prenda 3" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Conjunto de waterpolo</h3>
+          <p class="text-gray-700">Conjunto para adultos de waterpolo.</p>
+          <p class="text-gray-600">$15.99</p>
+          <button onclick="agregarAlCarrito({ nombre: 'Conjunto waterpolo', precio: 15.99 })">Agregar al carrito</button>
+        </div>
+      </div>
+      <div class="bg-white rounded shadow-md">
+        <img src="../img/25.jpg" alt="Prenda 3" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Raqueta de ping pong</h3>
+          <p class="text-gray-700">Conjunto de raquetas de ping pong.</p>
+          <p class="text-gray-600">$20</p>
+          <button onclick="agregarAlCarrito({ nombre: 'Raqueta ping pong', precio: 20 })">Agregar al carrito</button>
+        </div>
+      </div>
+      <div class="bg-white rounded shadow-md">
+        <img src="../img/26.jpg" alt="Prenda 3" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Conjunto de tenis</h3>
+          <p class="text-gray-700">Ropa de mujer de tenis.</p>
+          <p class="text-gray-600">$19.99</p>
+          <button onclick="agregarAlCarrito({ nombre: 'Conjunto tenis para mujer', precio: 19.99 })">Agregar al carrito</button>
+        </div>
+      </div>
+      <div class="bg-white rounded shadow-md">
+        <img src="../img/18.webp" alt="Prenda 3" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Conjunto de padel</h3>
+          <p class="text-gray-700">Ropa de padel para mujer.</p>
+          <p class="text-gray-600">$19.99</p>
+          <button onclick="agregarAlCarrito({ nombre: 'Conjunto padel mujer', precio: 19.99 })">Agregar al carrito</button>
+        </div>
+      </div>
+
 
     </div>
   </main>
@@ -118,7 +205,55 @@
       </div>
     </div>
   </footer>
-  <script src="carrito.js"></script>
+  <script>   
+  let carrito = [];
+
+
+  function agregarAlCarrito(producto) {
+    carrito.push(producto);
+    mostrarCarrito();
+  }
+
+  
+  function mostrarCarrito() {
+    const listaCarrito = document.getElementById('listaCarrito');
+    listaCarrito.innerHTML = '';
+
+    carrito.forEach((producto) => {
+      const itemCarrito = document.createElement('li');
+      itemCarrito.classList.add('producto');
+      itemCarrito.innerHTML = `
+        <span>${producto.nombre} - ${producto.precio}</span>
+        <button onclick="eliminarDelCarrito('${producto.nombre}')">Eliminar</button>
+      `;
+      listaCarrito.appendChild(itemCarrito);
+    });
+  }
+  document.getElementById('comprar-btn').addEventListener('click', function() {
+ 
+  document.querySelector('.blur-background').style.display = 'block';
+  document.querySelector('.modal').style.display = 'block';
+});
+
+
+document.getElementById('payment-form').addEventListener('submit', function(event) {
+  
+  event.preventDefault();
+
+  
+  document.querySelector('.confirmation-message').style.display = 'block';
+
+  
+  document.querySelector('.blur-background').style.display = 'none';
+  document.querySelector('.modal').style.display = 'none';
+});
+  
+  function eliminarDelCarrito(nombreProducto) {
+    carrito = carrito.filter((producto) => producto.nombre !== nombreProducto);
+    mostrarCarrito();
+  }
+
+  </script>
 
 </body>
 
