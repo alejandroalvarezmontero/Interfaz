@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="estilo.css">
     <title>Contactanos</title>
 </head>
+
 <header class="bg-gray-700 py-4">
     <nav class="bg-gray-700 shadow-lg">
       <div class="container mx-auto">
@@ -33,7 +34,7 @@
         </div>
       </div>
     </nav>
-  </header>
+</header>
 
 <body class="bg-gray-100">
     <div class="container mx-auto px-4 py-8">
@@ -56,7 +57,7 @@
                 <h2 class="text-xl font-semibold mb-4">Atención al cliente</h2>
                 <p>Si necesitas ayuda con una compra, devolución, o tienes alguna consulta específica sobre el servicio al cliente, por favor, completa el siguiente formulario y nos pondremos en contacto contigo lo antes posible.</p>
 
-                <form class="mt-6">
+                <form id="contactForm" class="mt-6">
                     <div class="mb-4">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre">
                             Nombre:
@@ -79,7 +80,7 @@
                     </div>
 
                     <div class="flex justify-end">
-                        <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                        <button id="enviarBtn" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
                             Enviar
                         </button>
                     </div>
@@ -89,45 +90,75 @@
     </div>
     <footer class="bg-gray-800 py-8">
         <div class="container mx-auto px-4">
-          <div class="flex flex-wrap justify-between">
-            <div class="w-full sm:w-1/2 lg:w-1/4 mb-4">
-              <h3 class="text-white text-lg font-bold mb-2">Enlaces útiles</h3>
-              <ul class="list-none">
-                <li><a href="#" class="text-gray-400 hover:text-white">Inicio</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-white">Acerca de</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-white">Servicios</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-white">Contacto</a></li>
-              </ul>
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full sm:w-1/2 lg:w-1/4 mb-4">
+                    <h3 class="text-white text-lg font-bold mb-2">Enlaces útiles</h3>
+                    <ul class="list-none">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Inicio</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Acerca de</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Servicios</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="w-full sm:w-1/2 lg:w-1/4 mb-4">
+                    <h3 class="text-white text-lg font-bold mb-2">Redes sociales</h3>
+                    <ul class="list-none">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Facebook</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Twitter</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="w-full sm:w-1/2 lg:w-1/4 mb-4">
+                    <h3 class="text-white text-lg font-bold mb-2">Contacto</h3>
+                    <p class="text-gray-400 mb-2">Dirección: Plaza Malagueta Bloque 13 4D</p>
+                    <p class="text-gray-400 mb-2">Teléfono: +34 650 80 85 12</p>
+                    <p class="text-gray-400">Email: springshop@gmail.com</p>
+                </div>
             </div>
-            <div class="w-full sm:w-1/2 lg:w-1/4 mb-4">
-              <h3 class="text-white text-lg font-bold mb-2">Redes sociales</h3>
-              <ul class="list-none">
-                <li><a href="#" class="text-gray-400 hover:text-white">Facebook</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-white">Twitter</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-white">Instagram</a></li>
-              </ul>
-            </div>
-            <div class="w-full sm:w-1/2 lg:w-1/4 mb-4">
-              <h3 class="text-white text-lg font-bold mb-2">Contacto</h3>
-              <p class="text-gray-400 mb-2">Dirección: Plaza Malagueta Bloque 13 4D</p>
-              <p class="text-gray-400 mb-2">Teléfono: 650808512</p>
-              <p class="text-gray-400 mb-2">Correo electrónico: springshop@gmail.com</p>
-            </div>
-          </div>
         </div>
-        <div class="border-t border-gray-700 mt-8">
-          <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center">
-              <p class="text-gray-400">© 2023 Todos los derechos reservados.</p>
-              <ul class="flex space-x-4">
-                <li><a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    var form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var nombre = document.getElementById('nombre').value;
+        var email = document.getElementById('email').value;
+        var mensaje = document.getElementById('mensaje').value;
+
+        if (nombre.trim() === '' || email.trim() === '' || mensaje.trim() === '') {
+            alert('Por favor, completa todos los campos del formulario.');
+            return;
+        }
+
+        var xhr = new XMLHttpRequest();
+
+      
+        xhr.open('POST', 'enviar.php', true);
+
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                alert(xhr.responseText);
+                form.reset();
+            } else {
+                alert('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente más tarde.');
+            }
+        };
+
+        xhr.send('nombre=' + encodeURIComponent(nombre) + '&email=' + encodeURIComponent(email) + '&mensaje=' + encodeURIComponent(mensaje));
+    });
+});
+
+        document.getElementById('enviarBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('contactForm').reset();
+            alert('¡Tu mensaje ha sido enviado a nuestro soporte!');
+        });
+    </script>
 </body>
 
 </html>
