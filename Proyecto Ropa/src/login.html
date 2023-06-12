@@ -60,33 +60,21 @@
     </div>
   </div>
   
-  <script>
-   const express = require('express');
-const app = express();
-const port = 3000;
+  <script src="users,js">
+const mongoose = require('mongoose');
 
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+mongoose.connect('mongodb+srv://alejandro:gevial1234@cluster0.fhx0jyq.mongodb.net/', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => {
+    console.log('Conexión a MongoDB establecida');
+  })
+  .catch((error) => {
+    console.error('Error al conectar a MongoDB:', error);
+  });
 
-// Rutas de inicio de sesión y registro
-app.post('/login', (req, res) => {
  
-  const { email, password } = req.body;
-
-  res.status(200).json({ message: 'Inicio de sesión exitoso' });
-});
-
-app.post('/register', (req, res) => {
-  
-  const { name, email, password } = req.body;
-
-  res.status(200).json({ message: 'Usuario registrado exitosamente' });
-});
-
-// Iniciar el servidor
-app.listen(port, () => {
-  console.log(`Servidor escuchando en http://localhost:${port}`);
-});
   </script>
 </body>
 </html>

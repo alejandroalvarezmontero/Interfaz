@@ -1,0 +1,63 @@
+# netlify.toml
+
+# Configuración básica
+[build]
+  command = "npm run build" # Comando de compilación
+  publish = "dist" # Carpeta de archivos estáticos para desplegar
+
+# Redirecciones y reescrituras de URL
+[[redirects]]
+  from = "/*" # Todas las rutas
+  to = "/index.html" # Redirigir a index.html
+
+# Variables de entorno
+[build.environment]
+  NODE_ENV = "production" # Configurar variable de entorno
+  API_KEY = "your-api-key" # Configurar tu clave de API
+
+# Optimizaciones
+[build.processing]
+  css = { minify = true } # Minificar archivos CSS
+  js = { minify = true } # Minificar archivos JavaScript
+  images = { compress = true } # Comprimir imágenes
+
+# Configuración de encabezados de seguridad
+[[headers]]
+  for = "/*" # Todas las rutas
+    [headers.values]
+    X-Frame-Options = "DENY" # Configurar la directiva X-Frame-Options
+    X-XSS-Protection = "1; mode=block" # Configurar la directiva X-XSS-Protection
+    X-Content-Type-Options = "nosniff" # Configurar la directiva X-Content-Type-Options
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://example.com; style-src 'self' 'unsafe-inline';" # Configurar la directiva Content-Security-Policy
+
+# Reglas de reescritura para archivos estáticos
+[[headers]]
+  for = "/static/*" # Rutas que coinciden con /static/*
+    [headers.values]
+    Cache-Control = "public, max-age=31536000" # Configurar la directiva Cache-Control para archivos estáticos
+
+# Redirecciones de dominio personalizado
+[[redirects]]
+  from = "https://www.example.com/*" # Dominio personalizado
+  to = "https://example.com/:splat" # Redireccionar a dominio principal
+
+# Configuración de notificaciones
+[notifications.slack]
+  webhook = "https://hooks.slack.com/services/your-slack-webhook-url" # Configurar el webhook de Slack para recibir notificaciones de despliegue
+
+# Configuración de funciones Lambda (opcional)
+[build.functions]
+  directory = "netlify-functions" # Carpeta que contiene las funciones Lambda
+
+# Configuración de prerenderización (opcional)
+[[plugins]]
+  package = "@netlify/plugin-prerendering"
+
+  # Opciones de prerenderización
+  [plugins.inputs]
+    rules = [
+      {
+        paths = ["/*"] # Rutas a prerrenderizar
+        renderer = "prerender-spa" # Motor de prerenderización
+      }
+    ]
