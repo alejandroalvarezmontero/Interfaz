@@ -12,39 +12,39 @@
 </head>
 
 <body>
-    <header class="bg-gray-700 py-4">
-        <nav class="bg-gray-700 shadow-lg">
-          <div class="container mx-auto">
-            <div class="sm:flex justify-around">
-              &nbsp;  &nbsp;  &nbsp;  &nbsp;
-              <img src="../img/1.png" class="rounded-full" width="70px" height="40px" alt=""> 
-              <a href="#" class="text-white text-3xl font-bold p-3">Sprinshop</a>
-              <ul class="text-gray-400 sm:self-center text-xl border-t sm:border-none">
-                <li class="sm:inline-block">
-                  <a href="main.html" class="p-3 hover:text-white">Inicio</a>
-                </li>
-                <li class="sm:inline-block">
-                  <a href="ofertas.html" class="p-3 hover:text-white">Ofertas</a>
-                </li>
-                <li class="sm:inline-block">
-                  <a href="contactanos.html" class="p-3 hover:text-white">Contáctanos</a>
-                </li>
-                <li class="sm:inline-block">
-                  <a href="nuevasprendas.html" class="p-3 hover:text-white">Nuevas prendras</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
+  <header class="bg-gray-900 py-4">
+    <nav class="bg-gray-900 shadow-lg">
+      <div class="container mx-auto">
+        <div class="flex justify-between items-center">
+          <img src="../img/1.png" class="rounded-full" width="70px" height="40px" alt=""> 
+          <a href="#" class="text-white text-3xl font-bold p-3">Sprinshop</a>
+          <ul class="text-gray-400 flex space-x-4 text-xl border-t sm:border-none">
+            <li>
+              <a href="main.html" class="p-3 hover:text-white">Inicio</a>
+            </li>
+            <li>
+              <a href="ofertas.html" class="p-3 hover:text-white">Ofertas</a>
+            </li>
+            <li>
+              <a href="contactanos.html" class="p-3 hover:text-white">Contáctanos</a>
+            </li>
+            <li>
+              <a href="nuevasprendas.html" class="p-3 hover:text-white">Nuevas prendras</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
   <main class="container mx-auto py-8">
     <h2 class="text-3xl font-semibold mb-8">Nuevas Prendas</h2>
-    <div class="carrito">
-      <h3>Carrito de Compras</h3>
-      <ul id="listaCarrito"></ul>
-      <button id="comprar-btn">Comprar</button>
+    <div class="carrito bg-gray-200 p-4 rounded-lg shadow-md">
+      <h3 class="text-xl font-bold mb-2">Carrito de Compras</h3>
+      <ul id="listaCarrito" class="border-t border-gray-300 mt-2 pt-2"></ul>
+      <button id="comprar-btn" class="bg-gray-900 text-white py-2 px-4 rounded mt-4 hover:bg-gray-700">Comprar</button>
     </div>
+    
     <div class="blur-background"></div>
 
   <div class="modal">
@@ -81,7 +81,7 @@
           <h3 class="text-xl font-semibold mb-2">Conjunto hombre y mujer</h3>
           <p class="text-gray-700">Conjunto para hombre y conjunto también para mujer.</p>
           <p class="text-gray-600">$29.99</p>
-          <button onclick="agregarAlCarrito({ nombre: 'Conjunto hombre y mujer', precio: 29.99 })">Agregar al carrito</button>
+          <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="agregarAlCarrito({ nombre: 'Conjunto hombre y mujer', precio: 29.99 })">Agregar al carrito</button>
         </div>
       </div>
 
@@ -91,7 +91,7 @@
           <h3 class="text-xl font-semibold mb-2">Tirantas</h3>
           <p class="text-gray-700">Camisetas de tirantas tanto para hombre como para mujer.</p>
           <p class="text-gray-600">$14.99</p>
-          <button onclick="agregarAlCarrito({ nombre: 'Camiseta tirantas', precio: 14.99 })">Agregar al carrito</button>
+          <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="agregarAlCarrito({ nombre: 'Camiseta tirantas', precio: 14.99 })">Agregar al carrito</button>
         </div>
       </div>
 
@@ -101,7 +101,7 @@
           <h3 class="text-xl font-semibold mb-2">Ropa para niños</h3>
           <p class="text-gray-700">También tenemos ropa para niños.</p>
           <p class="text-gray-600">$49.99</p>
-          <button onclick="agregarAlCarrito({ nombre: 'Ropa de fútbol para niños ', precio: 49.99 })">Agregar al carrito</button>
+          <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="agregarAlCarrito({ nombre: 'Ropa de fútbol para niños ', precio: 49.99 })">Agregar al carrito</button>
         </div>
       </div>
 
@@ -111,7 +111,7 @@
           <h3 class="text-xl font-semibold mb-2">Conjunto para salir a correr</h3>
           <p class="text-gray-700">Ropa para mujer de running.</p>
           <p class="text-gray-600">$59.99</p>
-          <button onclick="agregarAlCarrito({ nombre: 'Conjunto Running', precio: 59.99 })">Agregar al carrito</button>
+          <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="agregarAlCarrito({ nombre: 'Conjunto Running', precio: 59.99 })">Agregar al carrito</button>
         </div>
       </div>
       <div class="bg-white rounded shadow-md">
@@ -120,7 +120,7 @@
           <h3 class="text-xl font-semibold mb-2">Ropa para jugar fútbol</h3>
           <p class="text-gray-700">Conjunto para jugar al fútbol.</p>
           <p class="text-gray-600">$19.99</p>
-          <button onclick="agregarAlCarrito({ nombre: 'Ropa fútbol adulto', precio: 19.99 })">Agregar al carrito</button>
+          <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="agregarAlCarrito({ nombre: 'Ropa fútbol adulto', precio: 19.99 })">Agregar al carrito</button>
         </div>
       </div>
       <div class="bg-white rounded shadow-md">
@@ -129,7 +129,7 @@
           <h3 class="text-xl font-semibold mb-2">Conjunto de waterpolo</h3>
           <p class="text-gray-700">Conjunto para adultos de waterpolo.</p>
           <p class="text-gray-600">$15.99</p>
-          <button onclick="agregarAlCarrito({ nombre: 'Conjunto waterpolo', precio: 15.99 })">Agregar al carrito</button>
+          <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="agregarAlCarrito({ nombre: 'Conjunto waterpolo', precio: 15.99 })">Agregar al carrito</button>
         </div>
       </div>
       <div class="bg-white rounded shadow-md">
@@ -138,7 +138,7 @@
           <h3 class="text-xl font-semibold mb-2">Raqueta de ping pong</h3>
           <p class="text-gray-700">Conjunto de raquetas de ping pong.</p>
           <p class="text-gray-600">$20</p>
-          <button onclick="agregarAlCarrito({ nombre: 'Raqueta ping pong', precio: 20 })">Agregar al carrito</button>
+          <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="agregarAlCarrito({ nombre: 'Raqueta ping pong', precio: 20 })">Agregar al carrito</button>
         </div>
       </div>
       <div class="bg-white rounded shadow-md">
@@ -147,7 +147,7 @@
           <h3 class="text-xl font-semibold mb-2">Conjunto de tenis</h3>
           <p class="text-gray-700">Ropa de mujer de tenis.</p>
           <p class="text-gray-600">$19.99</p>
-          <button onclick="agregarAlCarrito({ nombre: 'Conjunto tenis para mujer', precio: 19.99 })">Agregar al carrito</button>
+          <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="agregarAlCarrito({ nombre: 'Conjunto tenis para mujer', precio: 19.99 })">Agregar al carrito</button>
         </div>
       </div>
       <div class="bg-white rounded shadow-md">
@@ -156,7 +156,7 @@
           <h3 class="text-xl font-semibold mb-2">Conjunto de padel</h3>
           <p class="text-gray-700">Ropa de padel para mujer.</p>
           <p class="text-gray-600">$19.99</p>
-          <button onclick="agregarAlCarrito({ nombre: 'Conjunto padel mujer', precio: 19.99 })">Agregar al carrito</button>
+          <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="agregarAlCarrito({ nombre: 'Conjunto padel mujer', precio: 19.99 })">Agregar al carrito</button>
         </div>
       </div>
 
