@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ofertas de Ropa</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.7/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="estilo.css"
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
   <header class="bg-gray-900 py-4">
@@ -38,34 +38,10 @@
     <div class="carrito bg-gray-200 p-4 rounded-lg shadow-md">
       <h3 class="text-xl font-bold mb-2">Carrito de Compras</h3>
       <ul id="listaCarrito" class="border-t border-gray-300 mt-2 pt-2"></ul>
-      <button id="comprar-btn" class="bg-gray-900 text-white py-2 px-4 rounded mt-4 hover:bg-gray-700">Comprar</button>
+      <button id="comprar-btn" class="bg-gray-900 text-white py-2 px-4 rounded mt-4 hover:bg-gray-700"><a href="compra.html">Comprar</a></button>
     </div>
-    <div class="blur-background"></div>
+    
 
-    <div class="modal">
-      <h2>Rellena esto para poder realizar su compra</h2>
-      <form id="payment-form">
-        <label for="card-number">Número de Tarjeta:</label>
-        <input type="text" id="card-number" required>
-  
-        <label for="card-name">Nombre:</label>
-        <input type="text" id="card-name" required>
-  
-        <div>
-          <div style="display: inline-block; width: 60%;">
-            <label for="expiry-date">Fecha de Caducidad:</label>
-            <input type="text" id="expiry-date" required>
-          </div>
-          <div style="display: inline-block; width: 35%;">
-            <label for="cvc">CVC:</label>
-            <input type="text" id="cvc" required>
-          </div>
-        </div>
-  
-        <button type="submit">Pagar</button>
-       
-      </form>
-    </div>
     <h1 class="text-4xl text-white font-bold mb-8">Ofertas en Ropa</h1>
      
     

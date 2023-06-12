@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Pago</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .payment-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f3f7fb;
+    }
+
+    .payment-form {
+      background-color: #ffffff;
+      animation: fade-in 0.3s ease-in-out;
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="payment-container">
+    <div class="bg-white shadow-lg rounded p-8 max-w-sm payment-form">
+      <h2 class="text-2xl font-bold mb-4 text-center">Formulario de Pago</h2>
+      <form id="payment-form">
+        <div class="mb-4">
+          <label for="card-number" class="block text-gray-700 text-sm font-bold mb-2">Número de tarjeta:</label>
+          <input type="text" id="card-number" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:border-blue-300" placeholder="Ingrese el número de su tarjeta" required>
+        </div>
+        <div class="mb-4">
+          <label for="card-name" class="block text-gray-700 text-sm font-bold mb-2">Nombre del titular:</label>
+          <input type="text" id="card-name" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:border-blue-300" placeholder="Ingrese el nombre del titular de la tarjeta" required>
+        </div>
+        <div class="mb-4">
+          <label for="expiry-date" class="block text-gray-700 text-sm font-bold mb-2">Fecha de vencimiento:</label>
+          <input type="text" id="expiry-date" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:border-blue-300" placeholder="MM/AA" required>
+        </div>
+        <div class="mb-4">
+          <label for="cvv" class="block text-gray-700 text-sm font-bold mb-2">CVV:</label>
+          <input type="text" id="cvv" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:border-blue-300" placeholder="Ingrese el código CVV" required>
+        </div>
+        <button type="submit" class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-blue-600">Pagar</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const paymentForm = document.getElementById('payment-form');
+
+    paymentForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const paymentContainer = document.querySelector('.payment-container');
+      const paymentForm = document.querySelector('.payment-form');
+
+      paymentForm.style.animation = 'fade-out 0.3s ease-in-out';
+      setTimeout(() => {
+        paymentContainer.style.animation = 'fade-out 0.3s ease-in-out';
+        setTimeout(() => {
+          window.location.href = 'main.html';
+        }, 300);
+      }, 300);
+    });
+  </script>
+</body>
+</html>

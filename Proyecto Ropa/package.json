@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "mongoose": "^7.2.3",
-    "swagger": "^0.7.5"
+    "swagger": "^0.7.5",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.3"
   }
 }

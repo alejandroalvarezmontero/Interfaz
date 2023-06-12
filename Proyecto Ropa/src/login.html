@@ -60,7 +60,21 @@
     </div>
   </div>
   
-  <script src="users,js">
+  <script>
+        const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+    const loginTab = document.getElementById('login-tab');
+    const registerTab = document.getElementById('register-tab');
+
+    loginTab.addEventListener('click', () => {
+      loginForm.style.display = 'block';
+      registerForm.style.display = 'none';
+    });
+
+    registerTab.addEventListener('click', () => {
+      loginForm.style.display = 'none';
+      registerForm.style.display = 'block';
+    });
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb+srv://alejandro:gevial1234@cluster0.fhx0jyq.mongodb.net/', {
